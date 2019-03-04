@@ -1,0 +1,53 @@
+<idea-plugin>
+  <id>itbuddy.ta</id>
+  <name>Text Assistant</name>
+  <version>1.0</version>
+  <vendor email="itbuddy@163.com" url="https://github.com/smoothwind/TextAssistant">Stephen</vendor>
+
+  <description><![CDATA[
+   <em> A Code Assistant integrated some common feature for text process. </em>
+   <li>convert selected text to upper case</li>
+   <li>convert selected text to lower case</li>
+
+   ]]></description>
+
+  <change-notes><![CDATA[
+    <em>release 1.0.0 </em>
+    <p>For code fragment editing.</p>
+    ]]>
+  </change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="173.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+
+  <depends>com.intellij.modules.lang</depends>
+
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+    <!--
+    <action id="itbuddy.plugins.UpperCaseAction" class="itbuddy.plugins.UpperCaseAction" text="To Upper"
+            description="Convert to upper case">
+      <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+      <keyboard-shortcut keymap="$default" first-keystroke="ctrl O" second-keystroke=""/>
+    </action>
+    <action id="itbuddy.plugins.LowerCaseAction" class="itbuddy.plugins.LowerCaseAction" text="To Lower"
+            description="Convert to lower case">
+      <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+      <keyboard-shortcut keymap="$default" first-keystroke="ctrl L" second-keystroke=""/>
+    </action>-->
+
+
+    <group id="itbuddy.plugins.group.Selection" class="itbuddy.plugins.group.Selection" text="Selection"
+           description="Selection" popup="true">
+    <add-to-group group-id="ToolsMenu" anchor="last" />
+      <add-to-group group-id="EditorPopupMenu" anchor="last" />
+    </group>
+  </actions>
+</idea-plugin>
